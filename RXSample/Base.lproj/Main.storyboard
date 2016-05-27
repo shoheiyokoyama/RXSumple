@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="un6-Xr-Hym">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="un6-Xr-Hym">
                                 <rect key="frame" x="129" y="28" width="239" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" id="6jm-fs-Xa1"/>
@@ -38,7 +38,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UILabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-kK-Ju0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="UILabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-kK-Ju0">
                                 <rect key="frame" x="271" y="84" width="58" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="Loy-dQ-ODF"/>
@@ -120,14 +120,14 @@
                                 <exclude reference="Ksu-zC-xAb"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="VvT-iR-FTz"/>
-                                <exclude reference="l1p-9I-kor"/>
-                                <exclude reference="2Ee-W2-HMu"/>
-                                <exclude reference="Si4-R7-alW"/>
                                 <exclude reference="cvx-E5-erc"/>
                                 <exclude reference="3mu-9H-whS"/>
                                 <exclude reference="vc4-7c-Q4y"/>
                                 <exclude reference="xif-dw-uum"/>
+                                <exclude reference="VvT-iR-FTz"/>
+                                <exclude reference="l1p-9I-kor"/>
+                                <exclude reference="2Ee-W2-HMu"/>
+                                <exclude reference="Si4-R7-alW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -136,14 +136,14 @@
                                 <include reference="Ksu-zC-xAb"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="VvT-iR-FTz"/>
-                                <include reference="l1p-9I-kor"/>
-                                <include reference="2Ee-W2-HMu"/>
-                                <include reference="Si4-R7-alW"/>
                                 <include reference="cvx-E5-erc"/>
                                 <include reference="3mu-9H-whS"/>
                                 <include reference="vc4-7c-Q4y"/>
                                 <include reference="xif-dw-uum"/>
+                                <include reference="VvT-iR-FTz"/>
+                                <include reference="l1p-9I-kor"/>
+                                <include reference="2Ee-W2-HMu"/>
+                                <include reference="Si4-R7-alW"/>
                             </mask>
                         </variation>
                     </view>
