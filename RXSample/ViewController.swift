@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var textLabel: UILabel!
     
     let disposeBag = DisposeBag()
     
@@ -34,29 +35,26 @@ class ViewController: UIViewController {
     private func rxSlider() {
         slider.rx_value
             .map { String($0) }
-            .bindTo(label.rx_text)
+            .subscribeNext { [unowned self] text in
+                self.label.text = text
+            }
             .addDisposableTo(disposeBag)
     }
     
     private func rxTextField() {
         textField.rx_text
             .subscribeNext { [unowned self] text in
-                self.label.text = text
+                self.textLabel.text = text
             }
-            .addDisposableTo(disposeBag)
-        
-        textField.rx_text
-            .filter { str in  str.characters.count > 3 }
-            .subscribeNext { str in print(str) }
             .addDisposableTo(disposeBag)
     }
     
     private func rxButton() {
         button.rx_tap
-        .subscribeNext { _ in
-            print("tapped!")
-        }
-        .addDisposableTo(disposeBag)
+            .subscribeNext { _ in
+                print("tapped!")
+            }
+            .addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {

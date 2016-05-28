@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="50" id="R7f-9I-O95"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -102,13 +102,37 @@
                                     </mask>
                                 </variation>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="UILabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXn-KM-YEr">
+                                <rect key="frame" x="271" y="84" width="58" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1hI-bA-4P2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="qlR-Q3-xpK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qlR-Q3-xpK"/>
+                                        <exclude reference="1hI-bA-4P2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="qlR-Q3-xpK"/>
+                                        <include reference="1hI-bA-4P2"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vmW-kK-Ju0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ee-W2-HMu"/>
+                            <constraint firstItem="Ksu-zC-xAb" firstAttribute="top" secondItem="vmW-kK-Ju0" secondAttribute="bottom" constant="16" id="36V-vN-W5I"/>
                             <constraint firstItem="sbN-8s-vfx" firstAttribute="top" secondItem="Ksu-zC-xAb" secondAttribute="bottom" constant="30" id="3mu-9H-whS"/>
-                            <constraint firstItem="vmW-kK-Ju0" firstAttribute="top" secondItem="un6-Xr-Hym" secondAttribute="bottom" constant="15" id="Si4-R7-alW"/>
                             <constraint firstItem="un6-Xr-Hym" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VvT-iR-FTz"/>
+                            <constraint firstItem="cXn-KM-YEr" firstAttribute="top" secondItem="un6-Xr-Hym" secondAttribute="bottom" constant="15" id="Xne-O0-i5Q"/>
+                            <constraint firstItem="cXn-KM-YEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aSh-Tm-Jol"/>
                             <constraint firstItem="Ksu-zC-xAb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cvx-E5-erc"/>
                             <constraint firstItem="un6-Xr-Hym" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="l1p-9I-kor"/>
                             <constraint firstItem="sbN-8s-vfx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vc4-7c-Q4y"/>
@@ -118,32 +142,38 @@
                             <mask key="subviews">
                                 <exclude reference="sbN-8s-vfx"/>
                                 <exclude reference="Ksu-zC-xAb"/>
+                                <exclude reference="cXn-KM-YEr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="VvT-iR-FTz"/>
+                                <exclude reference="l1p-9I-kor"/>
+                                <exclude reference="Xne-O0-i5Q"/>
+                                <exclude reference="aSh-Tm-Jol"/>
+                                <exclude reference="2Ee-W2-HMu"/>
+                                <exclude reference="36V-vN-W5I"/>
                                 <exclude reference="cvx-E5-erc"/>
                                 <exclude reference="3mu-9H-whS"/>
                                 <exclude reference="vc4-7c-Q4y"/>
                                 <exclude reference="xif-dw-uum"/>
-                                <exclude reference="VvT-iR-FTz"/>
-                                <exclude reference="l1p-9I-kor"/>
-                                <exclude reference="2Ee-W2-HMu"/>
-                                <exclude reference="Si4-R7-alW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="sbN-8s-vfx"/>
                                 <include reference="Ksu-zC-xAb"/>
+                                <include reference="cXn-KM-YEr"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="VvT-iR-FTz"/>
+                                <include reference="l1p-9I-kor"/>
+                                <include reference="Xne-O0-i5Q"/>
+                                <include reference="aSh-Tm-Jol"/>
+                                <include reference="2Ee-W2-HMu"/>
+                                <include reference="36V-vN-W5I"/>
                                 <include reference="cvx-E5-erc"/>
                                 <include reference="3mu-9H-whS"/>
                                 <include reference="vc4-7c-Q4y"/>
                                 <include reference="xif-dw-uum"/>
-                                <include reference="VvT-iR-FTz"/>
-                                <include reference="l1p-9I-kor"/>
-                                <include reference="2Ee-W2-HMu"/>
-                                <include reference="Si4-R7-alW"/>
                             </mask>
                         </variation>
                     </view>
@@ -152,6 +182,7 @@
                         <outlet property="label" destination="vmW-kK-Ju0" id="Daj-m1-gmQ"/>
                         <outlet property="slider" destination="Ksu-zC-xAb" id="vhR-GX-dgM"/>
                         <outlet property="textField" destination="un6-Xr-Hym" id="xey-kr-xN2"/>
+                        <outlet property="textLabel" destination="cXn-KM-YEr" id="Qni-4D-ypS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
