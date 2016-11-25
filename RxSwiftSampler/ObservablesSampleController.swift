@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 // [RxSwift 入門 その１](http://tiny-wing.hatenablog.com/entry/2016/01/02/161322)
 
@@ -47,10 +48,7 @@ extension ObservablesSampleController {
         // next(2)
         // completed
         
-        // toObservable
-        let array: [Int] = [1, 2, 3]
-        let arrayObserbavle = array.toObservable()
-        let _ = arrayObserbavle.subscribe { event in print(event) }
+        
     }
 }
 

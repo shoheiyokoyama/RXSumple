@@ -6,6 +6,7 @@ target 'RxSwiftSampler' do
   use_frameworks!
   
   pod 'RxSwift'
+  pod 'RxCocoa’
   # Pods for RxSwiftSampler
 
 end
