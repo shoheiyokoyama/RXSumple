@@ -57,21 +57,29 @@ extension ObservablesSampleController {
         // next([1, 2, 3])
         // completed
         
-        let closure = { (element: Int) -> Observable<Int> in
+        func myJust<E>(element: E) -> Observable<E> {
             return Observable.create { observer in
                 observer.on(.next(element))
                 observer.on(.completed)
-                return DisposeBag() as! Disposable
-                //return Disposables.create()
+                return Disposables.create()
             }
         }
         
-        let _ = closure(2).subscribe { event in
+        let _ = myJust(element: 2).subscribe { event in
             print(event)
         }
         //next(2)
         //completed
         //completed
+        
+        enum ErrorType: Error { case invalid }
+        let error: ErrorType = .invalid
+        let errorObserbable: Observable<Int> = Observable.error(error)
+        let _ = errorObserbable.subscribe { event in
+            print(event)
+        }
+        // error(invalid)
+        // completed
     }
 }
 

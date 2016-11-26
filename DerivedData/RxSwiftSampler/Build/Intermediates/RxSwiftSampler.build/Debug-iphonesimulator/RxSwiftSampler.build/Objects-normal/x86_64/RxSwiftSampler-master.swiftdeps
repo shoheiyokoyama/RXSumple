@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "817c81d3348e2fd5282b2dd201760cb7"
+build_time: [533447468, 215399000]
+inputs:
+  "/Users/a18968/Develop/RxSwiftSampler/RxSwiftSampler/ObservablesSampleController.swift": [533447461, 0]
+  "/Users/a18968/Develop/RxSwiftSampler/RxSwiftSampler/AppDelegate.swift": [533440814, 0]
