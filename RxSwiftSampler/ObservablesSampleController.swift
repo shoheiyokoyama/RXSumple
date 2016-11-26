@@ -12,6 +12,10 @@ import RxCocoa
 
 // [RxSwift 入門 その１](http://tiny-wing.hatenablog.com/entry/2016/01/02/161322)
 
+//https://realm.io/news/slug-max-alexander-functional-reactive-rxswift/
+
+//https://github.com/ReactiveX/RxSwift/blob/master/Documentation/GettingStarted.md
+
 class ObservablesSampleController: UIViewController {
     
     // MARK: - Life Cycle Method -
@@ -48,7 +52,26 @@ extension ObservablesSampleController {
         // next(2)
         // completed
         
+        let arrayObserbable = Variable<[Int]>([1, 2, 3])
+        let _ = arrayObserbable.asObservable().subscribe { event in print(event) }
+        // next([1, 2, 3])
+        // completed
         
+        let closure = { (element: Int) -> Observable<Int> in
+            return Observable.create { observer in
+                observer.on(.next(element))
+                observer.on(.completed)
+                return DisposeBag() as! Disposable
+                //return Disposables.create()
+            }
+        }
+        
+        let _ = closure(2).subscribe { event in
+            print(event)
+        }
+        //next(2)
+        //completed
+        //completed
     }
 }
 
